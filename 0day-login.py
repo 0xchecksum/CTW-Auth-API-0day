@@ -17,7 +17,13 @@ class ExploitException(Exception):
 
 
 class Exploit:
-    """ CodeTheWorld authentication API command injection 0-day """
+    """ CodeTheWorld authentication API command injection 0-day
+    
+    Executes a simple command injection exploit, found in
+    the login.php file of CodeTheWorld's authentication API,
+    bypassing the poorly developed command injection filter,
+    that was made to prevent hackers like me LOL.
+    """
 
     def __init__(self, target, query, command):
         self.target = target
@@ -99,7 +105,7 @@ class Exploit:
 
 
 def main():
-    print('CodeTheWorld authentication API command injection 0day by checksum (0daySkid)\n')
+    print('CodeTheWorld authentication API (login.php) command injection 0-day by checksum (0daySkid)\n')
 
     print('Executing exploit...')
 
