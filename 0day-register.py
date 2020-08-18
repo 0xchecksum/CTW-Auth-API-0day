@@ -16,6 +16,12 @@ class Exploit:
     
     Executes a simple command injection exploit, found in
     the register.php file of CodeTheWorld's authentication API.
+    
+    No need to bypass any filters here, as r00ntu/co9/b0nk/Jeff the eGod (skid)
+    forgot to implement a command injection filter in the register.php file,
+    probably because he was too high on his weed when making this shit.
+    
+    10/10 developer - still not better than YandereDev.
     """
 
     def __init__(self, target, query, command):
