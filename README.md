@@ -1,4 +1,4 @@
-<h1 align="center">Jeff the eClown</h1>
+<h1 align="center">Jeff the eClown - honk honk</h1>
 
 <p align="center">
     <img src="https://cdn.discordapp.com/emojis/730960624409903195.png"/>
