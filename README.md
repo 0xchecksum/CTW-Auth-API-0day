@@ -1,6 +1,6 @@
 <h1 align="center">Jeff the eClown</h1>
 
-![alt text](https://i.kym-cdn.com/photos/images/facebook/001/459/556/023.png)
+![alt text](https://cdn.discordapp.com/emojis/730960624409903195.png)
 
 b0nk.cf DDoS API and CodeTheWorld authentication API command injection 0-day
 
