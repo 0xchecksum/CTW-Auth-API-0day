@@ -1,5 +1,5 @@
 # CodeTheWorld authentication API command injection 0-day
-# Author: checksum (0daySkid)
+# Author: checksum (@0xFADE)
 
 import requests
 import urllib.parse
@@ -56,7 +56,7 @@ class Exploit:
 
 
 def main():
-    print('CodeTheWorld authentication API (register.php) command injection 0day by checksum (0daySkid)\n')
+    print('CodeTheWorld authentication API (register.php) command injection 0day by checksum (@0xFADE)\n')
 
     print('Executing exploit...')
 
