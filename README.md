@@ -10,4 +10,4 @@ Two simple command injection 0-day exploits I made for the [authentication API](
 
 These exploits can also be executed on his DDoS API through the **key** parameter.
 
-Nigga said his APIs wasn't vulnerable, and that I was the biggest skid in the world, who wouldn't be able find or exploit any vulnerabilities in them. Ironic, amirite?
+Nigga said his APIs wasn't vulnerable, and that I was the biggest skid in the world, who wouldn't be able find or exploit any vulnerabilities in them. Ironic, isn't it?
